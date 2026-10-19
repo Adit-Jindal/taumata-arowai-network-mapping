@@ -53,7 +53,7 @@ streamlit run app.py
 
 ## Coordinate conventions
 
-The prototype accepts X/Y coordinates in EPSG:3857. It transforms the input
+The prototype uses X/Y coordinates in EPSG:3857. It transforms the input
 point to the layer's CRS before evaluating polygon coverage. Do not enter
 longitude/latitude into these fields.
 
@@ -71,3 +71,6 @@ The geodatabase is not bundled with this code. Keep it in an approved location
 and follow your organization's data-handling requirements. For a hosted app,
 the server must have authorized access to the geodatabase; do not put private
 data in a public repository.
+
+The map uses OpenStreetMap tiles for the initial prototype. Before production deployment, select a basemap provider and follow its tile-use rules and attribution requirements. The `.gdb` remains local to the machine/server running the app.
+
